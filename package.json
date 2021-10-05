@@ -1,0 +1,58 @@
+{
+  "name": "svelte-app",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "run-p routify rollup",
+    "build": "run-s build:*",
+    "build:app": "routify -b && rollup -c",
+    "build:static": "spank",
+    "serve": "spassr --ssr",
+    "rollup": "rollup -cw",
+    "nollup": "nollup -c --verbose",
+    "routify": "routify",
+    "test": "jest src"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@okta/okta-auth-js": "^5.5.0",
+    "@okta/okta-signin-widget": "^5.12.0",
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@roxi/routify": "^2.18.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/svelte": "^3.0.3",
+    "babel-jest": "^27.0.6",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "fs-extra": "^10.0.0",
+    "jest": "^27.0.6",
+    "nollup": "^0.16.4",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.14",
+    "postcss-import": "^14.0.1",
+    "rollup": "^2.47.0",
+    "rollup-plugin-hot": "^0.1.1",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.1.0",
+    "rollup-plugin-svelte-hot": "^1.0.0-7",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-workbox": "^5.2.1",
+    "spank": "^1.7.0",
+    "spassr": "^2.6.0",
+    "svelte": "^3.38.2",
+    "svelte-jester": "^1.7.0",
+    "svelte-preprocess": "^4.7.3",
+    "tossr": "^1.4.2"
+  },
+  "routify": {
+    "extensions": "svelte,html,svx,md",
+    "dynamicImports": false
+  },
+  "spassr": {},
+  "spank": {
+    "blacklist": [
+      "/example/modal/basic/4"
+    ]
+  }
+}
